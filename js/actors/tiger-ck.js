@@ -1,0 +1,1 @@
+var Tiger=function(a){this.game=a.game;this.position=a.coords;this.radius=config.tigerRadius;this.render()};Tiger.prototype={render:function(){game.ctx.fillStyle="rgba(200,0,0,0)";game.ctx.fillRect(this.position.x-5,this.position.y-5,10,10)},tap:function(){game.win();game.reset();game.start()}};

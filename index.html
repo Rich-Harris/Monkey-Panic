@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+		<title>Monkey Panic!</title>
+
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel='stylesheet' href="css/sunshiney/stylesheet.css" type='text/css'>
+
+		<!-- CREATEJS 
+		<script src="http://code.createjs.com/easeljs-0.4.1.min.js"></script>
+		<script src="http://code.createjs.com/soundjs-0.2.0.min.js"></script>
+		<script src="http://code.createjs.com/preloadjs-0.1.0.min.js"></script>-->
+
+		<!-- SOUNDMANAGER2 -->
+		<script src="vendor/soundmanager2/script/soundmanager2.js"></script>
+
+		<!-- CANVG -->
+		<script src="vendor/canvg/rgbcolor.js"></script>
+		<script src="vendor/canvg/canvg.js"></script>
+
+
+		<script src="js/extend.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/game.js"></script>
+		<script src="js/sound.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/tap.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/actors/monkey.js"></script>
+		<script src="js/actors/tiger.js"></script>
+
+		<script>
+			initSoundManager();
+		</script>
+	</head>
+
+	<body onload='ready()'> 
+		<div id="game">
+			<canvas id="background"></canvas>
+			<canvas id="foreground"></canvas>
+			
+			<div id="top">
+				<div id="timerContainer">
+					<div id="timerInner">
+						<div id="timerBar"></div>
+						<span id="timerText">10.00</span>
+					</div>
+				</div>
+
+				<div id="score">
+					0
+				</div>
+			</div>
+
+			<div id="status">
+				Status:
+			</div>
+
+
+
+			<div id="youLose">
+				<h2>FAIL</h2>
+				<p>score: <span id="endScore">0</span>
+				<p id="tryAgain"><a onclick="game.reset(); game.start()">try again</a>
+			</div>
+		</div>
+	</body>
+</html>
